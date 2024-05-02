@@ -8,18 +8,8 @@ export struct Task {
 
 export component AppWindow inherits Window {
     in-out property <[Task]> task-list;
-    // in-out property <int> counter: 42;
-    // in property <string> name;
-    // callback request-increase-value();
     callback request-mark-task(string);
     GroupBox {
-        // Button {
-        //     visible: true;
-        //     text: "Increase value";
-        //     clicked => {
-        //         root.request-increase-value();
-        //     }
-        // }
         VerticalLayout {
             for data in root.task-list: my-repeated-text := CheckBox {
                 toggled => {
